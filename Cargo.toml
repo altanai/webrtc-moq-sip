@@ -1,0 +1,22 @@
+[package]
+name = "webrtc-moq-sip"
+version = "0.1.0"
+edition = "2024"
+description = "Config-driven WebRTC call orchestration with optional Media-over-QUIC publishing and SIP.js signaling support"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/altanai/webrtc-moq-sip"
+documentation = "https://docs.rs/webrtc-moq-sip"
+keywords = ["webrtc", "moq", "sip", "quic", "interop"]
+categories = ["network-programming", "multimedia"]
+
+[features]
+default = []
+serde-json = []
+runtime-adapters = ["dep:webrtc", "dep:moq-native"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+thiserror = "2"
+url = { version = "2", features = ["serde"] }
+webrtc = { version = "0.20.0-rc.4", optional = true }
+moq-native = { version = "0.19.3", optional = true }

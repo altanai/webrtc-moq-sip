@@ -1,0 +1,24 @@
+{
+  "mode": "call_and_publish",
+  "webrtc": {
+    "room": "interop-lab",
+    "publisher_id": "alice",
+    "stun_urls": ["stun:stun.l.google.com:19302"],
+    "audio": true,
+    "video": true
+  },
+  "sip_js": {
+    "ws_server": "wss://sip.example.com/ws",
+    "sip_uri": "sip:alice@example.com",
+    "authorization_user": "alice",
+    "display_name": "Alice",
+    "register": true
+  },
+  "moq": {
+    "relay_url": "https://relay.example.com/moq",
+    "namespace": "webrtc/interop-lab/alice",
+    "video_track": "video/main",
+    "audio_track": "audio/main",
+    "keyframe_priority": 250
+  }
+}
