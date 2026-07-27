@@ -1,5 +1,7 @@
 # webrtc-moq-sip
 
+[![Update webrtcdevelopment npm status](https://github.com/altanai/webrtc-moq-sip/actions/workflows/update-webrtcdevelopment-status.yml/badge.svg)](https://github.com/altanai/webrtc-moq-sip/actions/workflows/update-webrtcdevelopment-status.yml)
+
 Config-first Rust library to bootstrap:
 
 - WebRTC call sessions (powered by `webrtc-rs` integration points),
@@ -84,3 +86,19 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 - This crate currently focuses on orchestration and integration contracts.
 - Runtime media transport wiring to `webrtc-rs` and concrete MoQ publishers can be plugged in using the generated startup plan.
+
+## Added In-Repo Tools
+
+This repository now also includes:
+
+- `tools/npm-status`: automated status tracking for the npm package `webrtcdevelopment`
+- `tools/webrtcdevelopment-native`: native Chrome WebRTC helper that supports the config structure documented by `webrtcdevelopment` (`local`, `remote`, `incoming`, `outgoing`, `session`)
+
+Key files:
+
+- `tools/npm-status/status.json`
+- `tools/npm-status/STATUS.md`
+- `tools/npm-status/scripts/update-status.ps1`
+- `tools/webrtcdevelopment-native/webrtcdevelopment-native.js`
+- `tools/webrtcdevelopment-native/config/webrtcdevelopment-config.example.json`
+- `tools/webrtcdevelopment-native/examples/native-chrome-demo.html`
